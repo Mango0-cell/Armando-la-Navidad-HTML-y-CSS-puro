@@ -303,3 +303,452 @@ form {
     transform: rotateY(180deg);
 }
 
+/* checked:flip */
+#card1:checked~.cards1 label[for="card1"] .flip-card-inner,
+#card2:checked~.cards1 label[for="card2"] .flip-card-inner,
+#card3:checked~.cards1 label[for="card3"] .flip-card-inner,
+#card4:checked~.cards1 label[for="card4"] .flip-card-inner,
+#card5:checked~.cards1 label[for="card5"] .flip-card-inner,
+#card6:checked~.cards1 label[for="card6"] .flip-card-inner,
+#card7:checked~.cards1 label[for="card7"] .flip-card-inner,
+#card8:checked~.cards1 label[for="card8"] .flip-card-inner,
+#card9:checked~.cards1 label[for="card9"] .flip-card-inner,
+#card10:checked~.cards1 label[for="card10"] .flip-card-inner,
+#card11:checked~.cards1 label[for="card11"] .flip-card-inner,
+#card12:checked~.cards1 label[for="card12"] .flip-card-inner,
+#card13:checked~.cards1 label[for="card13"] .flip-card-inner,
+#card14:checked~.cards1 label[for="card14"] .flip-card-inner,
+#card15:checked~.cards1 label[for="card15"] .flip-card-inner,
+#card16:checked~.cards1 label[for="card16"] .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+#card1:checked~#card9:checked~.cards1 label[for="card1"],
+#card1:checked~#card9:checked~.cards1 label[for="card9"],
+#card2:checked~#card12:checked~.cards1 label[for="card2"],
+#card2:checked~#card12:checked~.cards1 label[for="card12"],
+#card4:checked~#card10:checked~.cards1 label[for="card4"],
+#card4:checked~#card10:checked~.cards1 label[for="card10"],
+#card5:checked~#card13:checked~.cards1 label[for="card5"],
+#card5:checked~#card13:checked~.cards1 label[for="card13"],
+#card6:checked~#card11:checked~.cards1 label[for="card6"],
+#card6:checked~#card11:checked~.cards1 label[for="card11"],
+#card7:checked~#card15:checked~.cards1 label[for="card7"],
+#card7:checked~#card15:checked~.cards1 label[for="card15"],
+#card8:checked~#card14:checked~.cards1 label[for="card8"],
+#card8:checked~#card14:checked~.cards1 label[for="card14"],
+#card3:checked~#card16:checked~.cards1 label[for="card3"],
+#card3:checked~#card16:checked~.cards1 label[for="card16"] {
+    pointer-events: none;
+    box-shadow: 0 0 15px #2ecc71;
+    transition: box-shadow 0.5s;
+}
+
+/*  MODAL */
+.msg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+
+    width: 1050px;
+    max-width: 90%;
+    height: 450px;
+
+    background-color: #fceea7;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid #f1c40f;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1000px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    pointer-events: none;
+}
+
+.msg .modal-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.msg .modal-image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.msg .modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.msg .modal-image img[class*="pair"] {
+    object-fit: contain;
+    height: auto;
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+
+    transition: opacity 0.2s ease, transform 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.msg .modal-image .pair1 {
+    width: 19%;
+    top: 44%;
+    left: 0%;
+}
+
+.msg .modal-image .pair2 {
+    width: 22%;
+    top: 40%;
+    left: 30%;
+}
+
+.msg .modal-image .pair3 {
+    width: 13%;
+    top: 40.5%;
+    left: 52.5%;
+
+}
+
+.msg .modal-image .pair4 {
+    width: 15%;
+    top: 67%;
+    left: 15%;
+}
+
+.msg .modal-image .pair5 {
+    width: 11%;
+    top: 22%;
+    left: 3%;
+}
+
+.msg .modal-image .pair6 {
+    width: 13%;
+    top: 15%;
+    left: 26%;
+}
+
+.msg .modal-image .pair7 {
+    width: 12%;
+    top: 13%;
+    left: 16%;
+}
+
+.msg .modal-image .pair8 {
+    width: 13%;
+    top: 20%;
+    left: 45%;
+}
+
+@keyframes shadow {
+    0% {
+        opacity: 1;
+        transform: rotate(15deg);
+    }
+
+    30% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+        transform: translateY(1000px);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes shuffleParams {
+
+    0%,
+    100% {
+        order: 1;
+    }
+
+    6% {
+        order: 16;
+    }
+
+    12% {
+        order: 3;
+    }
+
+    18% {
+        order: 14;
+    }
+
+    25% {
+        order: 5;
+    }
+
+    31% {
+        order: 12;
+    }
+
+    37% {
+        order: 7;
+    }
+
+    43% {
+        order: 10;
+    }
+
+    50% {
+        order: 9;
+    }
+
+    56% {
+        order: 2;
+    }
+
+    62% {
+        order: 15;
+    }
+
+    68% {
+        order: 4;
+    }
+
+    75% {
+        order: 13;
+    }
+
+    81% {
+        order: 6;
+    }
+
+    87% {
+        order: 11;
+    }
+
+    93% {
+        order: 8;
+    }
+}
+
+#card1:checked~#card9:checked~.success-messages .modal-image .pair1,
+#card2:checked~#card12:checked~.success-messages .modal-image .pair5,
+#card4:checked~#card10:checked~.success-messages .modal-image .pair4,
+#card5:checked~#card13:checked~.success-messages .modal-image .pair2,
+#card6:checked~#card11:checked~.success-messages .modal-image .pair6,
+#card7:checked~#card15:checked~.success-messages .modal-image .pair7,
+#card8:checked~#card14:checked~.success-messages .modal-image .pair8,
+#card3:checked~#card16:checked~.success-messages .modal-image .pair3 {
+    animation: shadow 2s 0.5s forwards;
+}
+
+.msg .modal-info {
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.msg h2 {
+    color: #e74c3c;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.msg p {
+    color: #5d4037;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.timer-badge {
+    background-color: #f39c12;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/*  Modal animations*/
+@keyframes showModal5Seconds {
+    0% {
+        opacity: 0;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+#card1:checked~#card9:checked~.success-messages .msg-1,
+#card2:checked~#card12:checked~.success-messages .msg-2,
+#card4:checked~#card10:checked~.success-messages .msg-3,
+#card5:checked~#card13:checked~.success-messages .msg-4,
+#card6:checked~#card11:checked~.success-messages .msg-5,
+#card7:checked~#card15:checked~.success-messages .msg-6,
+#card8:checked~#card14:checked~.success-messages .msg-7,
+#card3:checked~#card16:checked~.success-messages .msg-8 {
+    animation: showModal5Seconds 5s;
+}
+
+
+/*  GAME OVER  */
+body:has(#card1:checked):has(#card2:checked):has(#card3:checked):has(#card4:checked):has(#card5:checked):has(#card6:checked):has(#card7:checked):has(#card8:checked):has(#card9:checked):has(#card10:checked):has(#card11:checked):has(#card12:checked):has(#card13:checked):has(#card14:checked):has(#card15:checked):has(#card16:checked) .msg-final {
+
+    display: flex !important;
+    visibility: hidden;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+
+    z-index: 5 !important;
+    animation: showModalFinal 0.8s 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.msg-final {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 1200px;
+    max-width: 90%;
+    height: 450px;
+}
+
+/*FINAL MODAL*/
+.modal-content-final {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.msg .modal-image-final img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+
+.modal-image-final {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.final-tape {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(2, 78, 49);
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    padding: 0 40px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+.final-tape p {
+    color: white;
+    font-size: 25px;
+}
+
+.final-tape img {
+    height: 35px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+/*-------------------------------*/
+
+
+@keyframes showModalFinal {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.btn-reset {
+    background-color: #ae3927;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 2px rgb(47, 26, 4);
+}
+
+.btn-reset:hover {
+    background-color: #d7a40aaf;
+    box-shadow: none;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    padding: 0 40px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+footer img {
+    height: 25px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.Contact {
+    background-color: rgb(64, 168, 168);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
